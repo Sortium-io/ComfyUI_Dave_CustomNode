@@ -31,10 +31,6 @@ class MultiAreaConditioning:
         resolutionX = 1024
         resolutionY = 1024
 
-        # DEBUG
-        print(f"Values: {values}")
-        print(f"Resolution: {resolutionX}x{resolutionY}")
-
         k = 0
         for arg in kwargs:
             if k > len(values): break;
