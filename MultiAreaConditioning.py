@@ -15,7 +15,6 @@ class MultiAreaConditioning:
                 "conditioning0": ("CONDITIONING", ),
                 "conditioning1": ("CONDITIONING", )
             },
-            "hidden": {"extra_pnginfo": "EXTRA_PNGINFO", "unique_id": "UNIQUE_ID"},
         }
     
 
