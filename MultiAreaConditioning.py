@@ -15,7 +15,6 @@ class MultiAreaConditioning:
                 "conditioning0": ("CONDITIONING", ),
                 "conditioning1": ("CONDITIONING", )
             },
-            "hidden": {"extra_pnginfo": "EXTRA_PNGINFO", "unique_id": "UNIQUE_ID"},
         }
     
 
@@ -25,19 +24,13 @@ class MultiAreaConditioning:
     FUNCTION = "doStuff"
     CATEGORY = "Davemane42"
 
-    def doStuff(self, extra_pnginfo, unique_id, **kwargs):
+    def doStuff(self, **kwargs):
 
         c = []
-        values = []
-        resolutionX = 512
-        resolutionY = 512
+        values = [[0, 0, 1024, 1024, 1], [64, 64, 896, 896, 1]]
+        resolutionX = 1024
+        resolutionY = 1024
 
-        for node in extra_pnginfo["workflow"]["nodes"]:
-            if node["id"] == int(unique_id):
-                values = node["properties"]["values"]
-                resolutionX = node["properties"]["width"]
-                resolutionY = node["properties"]["height"]
-                break
         k = 0
         for arg in kwargs:
             if k > len(values): break;
