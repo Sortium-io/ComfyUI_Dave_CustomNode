@@ -38,6 +38,11 @@ class MultiAreaConditioning:
                 resolutionX = node["properties"]["width"]
                 resolutionY = node["properties"]["height"]
                 break
+
+        # DEBUG
+        print(f"Values: {values}")
+        print(f"Resolution: {resolutionX}x{resolutionY}")
+
         k = 0
         for arg in kwargs:
             if k > len(values): break;
